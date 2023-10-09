@@ -4,15 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensagem</title>
+    <style>
+        input{
+            font: bold 12pt arial;
+            width: 90px;
+            height: 70px;
+            border-color: rgba(0, 0, 0, 0.178);
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>Desafio das Mensagens</h1>
-    <input onclick="clicou()" type="button" value="Botão 1">
-    <input onclick="clicou2()" type="button" value="Botão 2">
-    <input onclick="clicou3()" type="button" value="Botão 3">
+    <input id="bt" onmouseenter="entrou()" onclick="clicou()" type="button" value="Botão 1">
+    <input id="bt2" onmouseenter="entrou2()" onclick="clicou2()" type="button" value="Botão 2">
+    <input  id="bt3" onmouseenter="entrou3()" onclick="clicou3()" type="button" value="Botão 3">
     <script>
+        var bt = window.document.getElementById('bt')
+        function entrou(){
+           bt.style.background = 'gray'
+        }
+
+        function entrou2(){
+            bt2.style.background = 'gray'
+        }
+
+        function entrou3(){
+            bt3.style.background = 'gray'
+        }
         function clicou(){
             window.alert('Você clicou no botão 1')
+            
         }
         function clicou2(){
             window.alert('Você clicou no botão 2')
