@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificando sua nacionalidade</h1>
+    Digite seu país: <input type="text" name="txtn" id="txtn">
+    <input type="button" value="Verificar" onclick="Verificar()">
+    <div id="res"></div>
+    <script>
+        var txtn = document.getElementById('txtn')
+        function Verificar(){
+            var pais = txtn.value
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Seu país é <strong>${pais}</strong></p>`
+            if(pais == 'Brasil' || pais == 'brasil'){
+                res.innerHTML += `<p>Você é brasileiro!</p>`
+            }else{
+                res.innerHTML += `<p>Você  é estrangeiro!</p>`
+            }
+        }
+    </script>
+
+</body>
+</html>
